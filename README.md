@@ -7,22 +7,22 @@
 git clone https://github.com/carlosintrieri/Portfolio_Carlos_Intrieri/
 
 
-## Entrar na pasta do projeto
+# Entrar na pasta do projeto
 
 cd nome-da-pasta
 
 
-## Instalar dependências
+# Instalar dependências
 
 npm install
 
 
-## Instalar react-scripts (se necessário)
+# Instalar react-scripts (se necessário)
 
 npm i react-scripts
 
 
-Rodar o projeto
+# Rodar o projeto
 
 npm start
 
