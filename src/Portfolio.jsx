@@ -72,9 +72,9 @@ const Portfolio = () => {
                 ]
             },
             projects: {
-                title: "Projetos em Destaque",
+                title: "Meus Projetos",
                 viewProject: "Ver Projeto",
-                viewCode: "Ver Código",
+                viewCode: "Acessar Github",
                 viewDetails: "Ver Detalhes",
                 closeModal: "Fechar",
                 partner: "Parceiro",
@@ -86,6 +86,33 @@ const Portfolio = () => {
                 hardSkills: "Hard Skills",
                 softSkills: "Soft Skills",
                 projects: [
+                    {
+                        id: "envirosense",
+                        title: "EnviroSense",
+                        subtitle: "Plataforma de Monitoramento de Estações Meteorológicas com IoT",
+                        description: "Sistema completo de monitoramento meteorológico em tempo real com integração IoT via MQTT, duplo banco de dados (MongoDB + PostgreSQL), alertas automáticos e dashboard com gráficos dinâmicos.",
+                        partner: "Tecsus",
+                        period: "2026-1",
+                        role: "Desenvolvedor Full-Stack",
+                        mediaType: "logo",
+                        media: [],
+                        technologies: [
+                            { name: "React", color: "#61DAFB" },
+                            { name: "Node.js", color: "#339933" },
+                            { name: "Express", color: "#374151" },
+                            { name: "PostgreSQL", color: "#336791" },
+                            { name: "MongoDB", color: "#4DB33D" },
+                            { name: "Python", color: "#3776AB" },
+                            { name: "MQTT", color: "#660066" },
+                            { name: "JWT", color: "#D63AFF" },
+                            { name: "Bootstrap", color: "#7952B3" },
+                            { name: "Chart.js", color: "#FF6384" }
+                        ],
+                        longDescription: "O EnviroSense é uma plataforma web completa para monitoramento de estações meteorológicas desenvolvida em parceria com a Tecsus. O sistema integra dispositivos IoT via protocolo MQTT, onde simuladores Python publicam dados meteorológicos em tempo real para um broker MQTT público. Os dados percorrem um fluxo de duplo banco de dados: primeiro são armazenados temporariamente no MongoDB Atlas (nuvem), e em seguida transferidos automaticamente para o PostgreSQL via serviço de transferência que roda a cada 10 segundos, resolvendo relacionamentos de estações e parâmetros e aplicando fatores de calibração. O frontend React exibe dashboards com gráficos dinâmicos por estação e parâmetro, medições em tempo real, e sistema de alertas automáticos que escala severidade para crítico quando valores ultrapassam limites configurados.",
+                        contributions: "Desenvolvi toda a arquitetura do sistema de ponta a ponta. No backend, implementei o serviço de transferência MongoDB → PostgreSQL com resolução automática de id_estacao e id_parametro via JOIN, busca parcial de parâmetros para compatibilidade de nomes customizados, e verificação automática de alertas após cada medição inserida. Corrigi o fluxo completo de autenticação JWT, o modelo de estações para salvar uid corretamente, e criei o sistema de migration para corrigir bancos existentes sem perda de dados. No frontend, separei o histórico do Dashboard das medições em tempo real, implementei a rota /medicoes/historico com ROW_NUMBER() para garantir que todas as estações aparecem independentemente do volume de dados, adicionei campos valor_min e valor_max nos alertas, e desenvolvi o sistema de avisos automáticos que detecta valores extremos e exibe mensagens com emojis na aba Alertas com auto-remoção em 10 segundos.",
+                        hardSkills: "Node.js e Express para API REST com autenticação JWT. PostgreSQL com queries avançadas usando DISTINCT ON, ROW_NUMBER() OVER PARTITION BY e JOINs complexos. MongoDB Atlas com Mongoose para armazenamento temporário de medições IoT. Python com Paho-MQTT para simuladores e receptor de dados. React com hooks (useState, useEffect, useRef) para interface reativa. Chart.js para gráficos dinâmicos de séries temporais. Protocolo MQTT para comunicação IoT em tempo real. Bootstrap 5 para UI responsiva. Bcrypt para hash de senhas e JWT para autenticação stateless.",
+                        softSkills: "Capacidade analítica apurada para diagnosticar problemas complexos de fluxo de dados em sistemas distribuídos, como a identificação da raiz do problema no uid de estações que bloqueava toda a cadeia de medições. Persistência e raciocínio sistemático para depurar inconsistências entre múltiplos serviços rodando simultaneamente. Comunicação técnica precisa para descrever e resolver problemas incrementalmente. Proatividade para antecipar problemas de escalabilidade, como o LIMIT fixo que impedia novas estações de aparecer no Dashboard."
+                    },
                     {
                         id: "smartfarm",
                         title: "SmartFarm",
@@ -105,10 +132,10 @@ const Portfolio = () => {
                             { name: "Flask", color: "#000000" },
                             { name: "Python", color: "#3776ab" }
                         ],
-                        longDescription: "Este projeto foi realizado para a FATEC junto à equipe I9 para simular um ambiente real de desenvolvimento utilizando a metodologia ágil. O objetivo era desenvolver um sistema para monitoramento de uma estufa inteligente, onde dados vindos desta estufa pudessem ser armazenados e analisados.",
-                        contributions: "Atuei como Product Owner, sendo responsável pela criação do Product Backlog e organização dos sprints. Realizei a prototipação do projeto e desenvolvimento tanto no front-end quanto no back-end, criando funcionalidades de processamento de dados da estufa e sua exibição na interface gráfica.",
-                        hardSkills: "Utilizei CSS e HTML na estruturação das páginas, JavaScript para obtenção de dados do backend e criação de filtros, e Flask para renderização de páginas e CRUD dos dados das estufas.",
-                        softSkills: "Desenvolvi habilidades de comunicação como PO, mantendo contato constante com o cliente e ajudando colegas com dificuldades no desenvolvimento."
+                        longDescription: "Este projeto foi desenvolvido em parceria com a FATEC e a equipe I9, utilizando metodologia ágil Scrum para simular um ambiente real de desenvolvimento. O sistema foi criado para monitorar estufas inteligentes através da coleta, armazenamento e análise de dados ambientais. Implementei funcionalidades de processamento de dados em tempo real, criação de dashboards interativos e sistema de filtros. O backend foi desenvolvido em Flask com Python, gerenciando toda a lógica de negócio e persistência de dados. No frontend, utilizei JavaScript puro para criar visualizações dinâmicas e filtros avançados. Como primeiro projeto na Fatec, enfrentamos desafios com a organização das APIs e integração da equipe, mas foi uma experiência fundamental de aprendizado.",
+                        contributions: "Como Scrum Master, fui responsável pela organização da equipe, condução das cerimônias ágeis e remoção de impedimentos. No desenvolvimento, atuei tanto no frontend quanto no backend, criando a arquitetura de processamento de dados dos sensores, implementando rotas da API para comunicação entre sistemas, e desenvolvendo a interface gráfica com gráficos dinâmicos e sistema de filtros para análise de dados históricos. Também implementei funcionalidades de autenticação e validação de dados.",
+                        hardSkills: "Desenvolvimento de interfaces responsivas com HTML5 e CSS3, manipulação avançada do DOM e requisições assíncronas com JavaScript, criação de APIs REST com Flask, modelagem e persistência de dados, processamento de dados em Python, implementação de gráficos dinâmicos com bibliotecas JavaScript, sistema de filtros avançados e validações tanto no frontend quanto no backend.",
+                        softSkills: "Liderança como Scrum Master coordenando uma equipe em metodologia ágil, gestão de conflitos e facilitação de comunicação entre membros, organização e priorização de tarefas em sprints, trabalho em equipe em ambiente de aprendizado inicial, adaptabilidade diante de desafios técnicos e organizacionais, proatividade na resolução de problemas e assunção de responsabilidades desde o início do curso."
                     },
                     {
                         id: "syntax",
@@ -153,10 +180,10 @@ const Portfolio = () => {
                             { name: "Prisma ORM", color: "#2d3748" },
                             { name: "Axios", color: "#5a29e4" }
                         ],
-                        longDescription: "Sistema criado para simular um ambiente real de desenvolvimento com metodologia ágil. O objetivo era criar uma aplicação web capaz de armazenar dados para uma empresa de estoque fictícia, bem como realizar análise e gerenciamento destes dados.",
-                        contributions: "Atuei como desenvolvedor full stack, criando interface moderna e responsiva com React e Tailwind CSS. Desenvolvi componentes como dashboard de gerenciamento, tabelas dinâmicas com filtros e formulários com validação. No back-end, trabalhei com Express.js e Prisma ORM.",
-                        hardSkills: "Construção de interfaces dinâmicas com React, estilização moderna com Tailwind CSS, integração com APIs usando Axios, e desenvolvimento de rotas REST com Express.js e Prisma ORM.",
-                        softSkills: "Desenvolvi persistência e capacidade de trabalho em equipe, mantendo entregas dentro do prazo mesmo com desafios organizacionais durante as sprints."
+                        longDescription: "Sistema desenvolvido para simular um ambiente real de desenvolvimento com metodologia ágil, criando uma aplicação web capaz de armazenar, analisar e gerenciar dados de estoque para uma empresa fictícia. O sistema oferece controle completo sobre o inventário, permitindo cadastro detalhado de produtos com múltiplos atributos, organização por categorias, gestão de movimentações de entrada e saída, e registro completo do histórico de operações. Implementei dashboards com visualização de dados através de gráficos, tabelas dinâmicas com filtros e ordenação, formulários com validação robusta, e integração completa entre frontend e backend. O projeto utilizou React com Tailwind CSS no frontend para criar uma interface moderna e intuitiva, e Express.js com Prisma ORM no backend para gerenciar a lógica de negócio e persistência dos dados. Apesar dos resultados técnicos alcançados, houve alguns desafios com a integração e alinhamento da equipe, além de falta de cuidado em alguns aspectos da apresentação final.",
+                        contributions: "Atuei como desenvolvedor full stack responsável por criar tanto a interface quanto a lógica de negócio da aplicação. No frontend, desenvolvi uma interface moderna e totalmente responsiva utilizando React e Tailwind CSS, criando componentes reutilizáveis como dashboard de gerenciamento com cards informativos, tabelas dinâmicas com funcionalidades de filtro, ordenação e paginação, formulários complexos com validação em tempo real, e modais para ações específicas. No backend, trabalhei com Express.js e Prisma ORM para criar rotas REST, implementar a camada de acesso aos dados, gerenciar transações e garantir validações de negócio. Também contribuí na integração entre as camadas através do Axios para requisições HTTP.",
+                        hardSkills: "Construção de interfaces dinâmicas e responsivas com React, utilizando hooks (useState, useEffect, useContext) e componentização eficiente, estilização moderna e utilitária com Tailwind CSS, integração com APIs REST usando Axios para requisições HTTP assíncronas, desenvolvimento de rotas e middlewares com Express.js, modelagem e manipulação de dados com Prisma ORM, validações tanto no frontend quanto no backend, implementação de filtros dinâmicos e ordenação de dados, gerenciamento de estado da aplicação.",
+                        softSkills: "Persistência e determinação para superar desafios técnicos e organizacionais, capacidade de trabalho em equipe mesmo em contextos difíceis, gestão autônoma de tempo e prioridades para manter entregas dentro do prazo, flexibilidade para se adaptar a mudanças de requisitos durante as sprints, comunicação efetiva para alinhamento de expectativas, proatividade na identificação e resolução de problemas antes que se tornem impedimentos críticos, resiliência diante de dificuldades de integração da equipe."
                     }
                 ]
             },
@@ -252,6 +279,33 @@ const Portfolio = () => {
                 softSkills: "Soft Skills",
                 projects: [
                     {
+                        id: "envirosense",
+                        title: "EnviroSense",
+                        subtitle: "Weather Station Monitoring Platform with IoT",
+                        description: "Complete real-time meteorological monitoring system with IoT integration via MQTT, dual database (MongoDB + PostgreSQL), automatic alerts and dashboard with dynamic charts.",
+                        partner: "Tecsus",
+                        period: "2026-1",
+                        role: "Full-Stack Developer",
+                        mediaType: "logo",
+                        media: [],
+                        technologies: [
+                            { name: "React", color: "#61DAFB" },
+                            { name: "Node.js", color: "#339933" },
+                            { name: "Express", color: "#374151" },
+                            { name: "PostgreSQL", color: "#336791" },
+                            { name: "MongoDB", color: "#4DB33D" },
+                            { name: "Python", color: "#3776AB" },
+                            { name: "MQTT", color: "#660066" },
+                            { name: "JWT", color: "#D63AFF" },
+                            { name: "Bootstrap", color: "#7952B3" },
+                            { name: "Chart.js", color: "#FF6384" }
+                        ],
+                        longDescription: "EnviroSense is a complete web platform for weather station monitoring developed in partnership with Tecsus. The system integrates IoT devices via MQTT protocol, where Python simulators publish real-time meteorological data to a public MQTT broker. Data flows through a dual database pipeline: first stored temporarily in MongoDB Atlas (cloud), then automatically transferred to PostgreSQL via a transfer service running every 10 seconds, resolving station and parameter relationships and applying calibration factors. The React frontend displays dashboards with dynamic charts per station and parameter, real-time measurements, and an automatic alert system that escalates severity to critical when values exceed configured limits.",
+                        contributions: "I developed the entire system architecture end-to-end. In the backend, I implemented the MongoDB to PostgreSQL transfer service with automatic id_estacao and id_parametro resolution via JOIN, partial parameter name search for custom name compatibility, and automatic alert verification after each measurement inserted. I fixed the complete JWT authentication flow, the station model to correctly save uid, and created the migration system to fix existing databases without data loss. In the frontend, I separated the Dashboard history from real-time measurements, implemented the /medicoes/historico route with ROW_NUMBER() to ensure all stations appear regardless of data volume, added valor_min and valor_max fields to alerts, and developed the automatic warning system that detects extreme values and displays emoji messages in the Alerts tab with 10-second auto-removal.",
+                        hardSkills: "Node.js and Express for REST API with JWT authentication. PostgreSQL with advanced queries using DISTINCT ON, ROW_NUMBER() OVER PARTITION BY and complex JOINs. MongoDB Atlas with Mongoose for temporary IoT measurement storage. Python with Paho-MQTT for simulators and data receptor. React with hooks (useState, useEffect, useRef) for reactive interface. Chart.js for dynamic time series charts. MQTT protocol for real-time IoT communication. Bootstrap 5 for responsive UI. Bcrypt for password hashing and JWT for stateless authentication.",
+                        softSkills: "Sharp analytical ability to diagnose complex data flow problems in distributed systems, such as identifying the root cause in station uid blocking the entire measurement chain. Persistence and systematic reasoning to debug inconsistencies between multiple simultaneously running services. Precise technical communication to describe and incrementally solve problems. Proactivity to anticipate scalability issues, such as fixed LIMIT preventing new stations from appearing on the Dashboard."
+                    },
+                    {
                         id: "smartfarm",
                         title: "SmartFarm",
                         subtitle: "Smart Greenhouse Monitoring System",
@@ -270,10 +324,10 @@ const Portfolio = () => {
                             { name: "Flask", color: "#000000" },
                             { name: "Python", color: "#3776ab" }
                         ],
-                        longDescription: "This project was carried out for FATEC with team I9 to simulate a real development environment using agile methodology. The goal was to develop a system for monitoring a smart greenhouse, where data from this greenhouse could be stored and analyzed.",
-                        contributions: "I acted as Product Owner, responsible for creating the Product Backlog and organizing sprints. I performed project prototyping and development both in front-end and back-end, creating greenhouse data processing functionalities and their display in the graphical interface.",
-                        hardSkills: "Used CSS and HTML in page structuring, JavaScript for obtaining backend data and creating filters, and Flask for page rendering and greenhouse data CRUD.",
-                        softSkills: "Developed communication skills as PO, maintaining constant contact with the client and helping colleagues with development difficulties."
+                        longDescription: "This project was developed in partnership with FATEC and team I9, using Scrum agile methodology to simulate a real development environment. The system was created to monitor smart greenhouses through the collection, storage and analysis of environmental data. I implemented real-time data processing features, interactive dashboards and filter systems. The backend was developed in Flask with Python, managing all business logic and data persistence. On the frontend, I used pure JavaScript to create dynamic visualizations and advanced filters. As our first project at Fatec, we faced challenges with API organization and team integration, but it was a fundamental learning experience.",
+                        contributions: "As Scrum Master, I was responsible for team organization, conducting agile ceremonies and removing impediments. In development, I worked on both frontend and backend, creating the sensor data processing architecture, implementing API routes for inter-system communication, and developing the graphical interface with dynamic charts and filter systems for historical data analysis. I also implemented authentication and data validation features.",
+                        hardSkills: "Responsive interface development with HTML5 and CSS3, advanced DOM manipulation and asynchronous requests with JavaScript, REST API creation with Flask, data modeling and persistence, data processing in Python, dynamic chart implementation with JavaScript libraries, advanced filter systems and validations on both frontend and backend.",
+                        softSkills: "Leadership as Scrum Master coordinating a team in agile methodology, conflict management and communication facilitation between members, task organization and prioritization in sprints, teamwork in an initial learning environment, adaptability to technical and organizational challenges, proactivity in problem solving and taking on responsibilities from the beginning of the course."
                     },
                     {
                         id: "syntax",
@@ -318,10 +372,10 @@ const Portfolio = () => {
                             { name: "Prisma ORM", color: "#2d3748" },
                             { name: "Axios", color: "#5a29e4" }
                         ],
-                        longDescription: "System created to simulate a real development environment with agile methodology. The goal was to create a web application capable of storing data for a fictional inventory company, as well as performing analysis and management of this data.",
-                        contributions: "I acted as a full stack developer, creating a modern and responsive interface with React and Tailwind CSS. I developed components such as management dashboard, dynamic tables with filters and forms with validation. In the back-end, I worked with Express.js and Prisma ORM.",
-                        hardSkills: "Building dynamic interfaces with React, modern styling with Tailwind CSS, API integration using Axios, and REST route development with Express.js and Prisma ORM.",
-                        softSkills: "Developed persistence and teamwork ability, maintaining deliveries on schedule even with organizational challenges during sprints."
+                        longDescription: "System developed to simulate a real agile development environment, creating a web application capable of storing, analyzing and managing inventory data for a fictional company. The system offers complete control over inventory, allowing detailed product registration with multiple attributes, category organization, management of inbound and outbound movements, and complete history of operations. I implemented dashboards with data visualization through charts, dynamic tables with filters and sorting, forms with robust validation, and complete integration between frontend and backend. The project used React with Tailwind CSS on the frontend and Express.js with Prisma ORM on the backend. Despite the technical results achieved, there were some challenges with team integration and alignment, as well as lack of care in some aspects of the final presentation.",
+                        contributions: "I acted as a full stack developer responsible for creating both the interface and the business logic of the application. On the frontend, I developed a modern and fully responsive interface using React and Tailwind CSS, creating reusable components such as management dashboard with informational cards, dynamic tables with filter, sorting and pagination features, complex forms with real-time validation, and modals for specific actions. On the backend, I worked with Express.js and Prisma ORM to create REST routes, implement the data access layer, manage transactions and ensure business validations. I also contributed to the integration between layers through Axios for HTTP requests.",
+                        hardSkills: "Building dynamic and responsive interfaces with React using hooks (useState, useEffect, useContext) and efficient componentization, modern and utility-first styling with Tailwind CSS, REST API integration using Axios for asynchronous HTTP requests, route and middleware development with Express.js, data modeling and manipulation with Prisma ORM, validations on both frontend and backend, dynamic filter and data sorting implementation, application state management.",
+                        softSkills: "Persistence and determination to overcome technical and organizational challenges, teamwork ability even in difficult contexts, autonomous time and priority management to maintain deliveries on schedule, flexibility to adapt to requirement changes during sprints, effective communication for expectation alignment, proactivity in identifying and solving problems before they become critical impediments, resilience in the face of team integration difficulties."
                     }
                 ]
             },
@@ -428,6 +482,17 @@ const Portfolio = () => {
             ]
         }
     ];
+
+    // Logo EnviroSense — imagem real do lobo
+    const EnviroSenseLogo = () => (
+        <div className="w-full h-full flex items-center justify-center" style={{ background: '#1a4731' }}>
+            <img
+                src="/lobo.png"
+                alt="EnviroSense Logo"
+                className="h-full w-full object-cover"
+            />
+        </div>
+    );
 
     // Logo do Leão
     const LionLogo = () => (
@@ -790,19 +855,29 @@ const Portfolio = () => {
                                 key={project.id}
                                 className={`rounded-xl overflow-hidden ${isDarkTheme ? 'bg-gray-800/50' : 'bg-white/50'} backdrop-blur-sm shadow-xl`}
                             >
-                                {/* Header com Imagem */}
+                                {/* Header com Imagem ou Logo */}
                                 <div className="h-64 relative overflow-hidden">
-                                    {project.mediaType === 'video' ? (
+                                    {project.mediaType === 'logo' ? (
+                                        <EnviroSenseLogo />
+                                    ) : project.mediaType === 'video' ? (
                                         <VideoPlayer src={project.media[0]} alt={project.title} />
                                     ) : (
                                         <ImageCarousel images={project.media} projectId={project.id} />
                                     )}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
-                                        <div>
-                                            <h3 className="text-3xl font-bold text-white mb-2">{project.title}</h3>
-                                            <p className="text-purple-300">{project.subtitle}</p>
+                                    {project.mediaType !== 'logo' && (
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-6">
+                                            <div>
+                                                <h3 className="text-3xl font-bold text-white mb-2">{project.title}</h3>
+                                                <p className="text-purple-300">{project.subtitle}</p>
+                                            </div>
                                         </div>
-                                    </div>
+                                    )}
+                                    {project.mediaType === 'logo' && (
+                                        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                                            <h3 className="text-3xl font-bold text-white mb-1 text-center">{project.title}</h3>
+                                            <p className="text-green-300 text-sm text-center">{project.subtitle}</p>
+                                        </div>
+                                    )}
                                 </div>
 
                                 {/* Conteúdo Completo */}
@@ -879,6 +954,7 @@ const Portfolio = () => {
                                     <div className="flex justify-center pt-6">
                                         <a
                                             href={
+                                                project.id === 'envirosense' ? 'https://github.com/carlosintrieri/envirosense' :
                                                 project.id === 'syntax' ? 'https://github.com/Syntax-Fatec-SJC' :
                                                     project.id === 'smartfarm' ? 'https://github.com/carlosintrieri/DSM1-SmartFarm-Primeira-API' :
                                                         'https://github.com/carlosintrieri/DSM2-inv.sort-Segunda-API'
@@ -1106,8 +1182,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-
-
-
-
-
