@@ -445,8 +445,8 @@ const Portfolio = () => {
     const skillsData = [
         {
             category: 'Frontend', skills: [
-                { name: 'HTML5', level: 93, icon: '🌐' },
-                { name: 'CSS3', level: 90, icon: '🎨' },
+                { name: 'HTML5', level: 80, icon: '🌐' },
+                { name: 'CSS3', level: 80, icon: '🎨' },
                 { name: 'JavaScript', level: 85, icon: '⚡' },
                 { name: 'TypeScript', level: 80, icon: '📝' },
                 { name: 'React', level: 88, icon: '⚛️' },
@@ -455,28 +455,27 @@ const Portfolio = () => {
         },
         {
             category: 'Backend', skills: [
-                { name: 'Python', level: 85, icon: '🐍' },
-                { name: 'Django', level: 75, icon: '🎸' },
+                { name: 'Python', level: 92, icon: '🐍' },
                 { name: 'Node.js', level: 82, icon: '🟢' },
-                { name: 'Express', level: 78, icon: '🚂' },
+                { name: 'Express', level: 82, icon: '🚂' },
                 { name: 'JavaScript', level: 85, icon: '⚡' },
                 { name: 'TypeScript', level: 80, icon: '📝' },
-                { name: 'Java', level: 72, icon: '☕' },
-                { name: 'Spring Boot', level: 70, icon: '🍃' },
-                { name: 'REST APIs', level: 85, icon: '🔌' }
+                { name: 'Java', level: 95, icon: '☕' },
+                { name: 'Spring Boot', level: 95, icon: '🍃' },
+                { name: 'REST APIs', level: 95, icon: '🔌' }
             ]
         },
         {
             category: 'Database', skills: [
                 { name: 'MySQL', level: 95, icon: '🗄️' },
                 { name: 'PostgreSQL', level: 88, icon: '🐘' },
-                { name: 'MongoDB', level: 75, icon: '🍃' }
+                { name: 'MongoDB', level: 85, icon: '🍃' }
             ]
         },
         {
             category: 'DevOps', skills: [
                 { name: 'Docker', level: 80, icon: '🐳' },
-                { name: 'Linux', level: 90, icon: '🐧' },
+                { name: 'Linux', level: 80, icon: '🐧' },
                 { name: 'AWS', level: 65, icon: '☁️' },
                 { name: 'Git', level: 92, icon: '📚' }
             ]
