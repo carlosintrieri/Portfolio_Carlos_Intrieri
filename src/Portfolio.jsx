@@ -70,7 +70,7 @@ const Portfolio = () => {
                         description: "A filosofia me ensinou a pensar criticamente, questionar pressupostos e buscar a essência dos problemas. Esta base filosófica tornou-se fundamental no meu desenvolvimento como programador."
                     }
                 ]
-            },
+            }, 
             projects: {
                 title: "Meus Projetos",
                 viewProject: "Ver Projeto",
