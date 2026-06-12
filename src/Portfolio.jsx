@@ -199,7 +199,7 @@ const Portfolio = () => {
                 location: "Localização",
                 info: {
                     location: "Caçapava, SP - Brasil",
-                    email: "carlos.intrieri@fatec.sp.gov.br"
+                    email: "carlos.intrieri@aluno.cps.sp.gov.br"
                 }
             }
         },
