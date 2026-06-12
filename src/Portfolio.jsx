@@ -23,12 +23,12 @@ const Portfolio = () => {
             hero: {
                 greeting: "Olá, eu sou",
                 name: "Carlos Intrieri",
-                title: "Desenvolvedor de Software & Filósofo",
+                title: "Desenvolvedor de Software Backend & Filósofo com foco em Java",
                 subtitle: "Criando experiências digitais únicas com código e reflexão",
                 cta: "Vamos conversar",
                 typewriterTexts: [
-                    "Desenvolvedor de Software & Filósofo",
-                    "Desenvolvedor de Software",
+                    "Desenvolvedor de Software Backend & Filósofo",
+                    "Desenvolvedor de Software Backend Java",
                     "Filósofo & Programador",
                     "Criador de Soluções Digitais"
                 ]
@@ -215,12 +215,12 @@ const Portfolio = () => {
             hero: {
                 greeting: "Hello, I'm",
                 name: "Carlos Intrieri",
-                title: "Software Developer & Philosopher",
+                title: "Backend Software Developer & Philosopher",
                 subtitle: "Creating unique digital experiences with code and reflection",
                 cta: "Let's talk",
                 typewriterTexts: [
-                    "Software Developer & Philosopher",
-                    "Software Developer",
+                    "Backend Software Developer & Philosopher focused on Java e Spring Boot",
+                    "Java Backend Developer",
                     "Philosopher & Programmer",
                     "Digital Solutions Creator"
                 ]
