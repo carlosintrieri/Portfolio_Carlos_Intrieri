@@ -23,11 +23,11 @@ const Portfolio = () => {
             hero: {
                 greeting: "Olá, eu sou",
                 name: "Carlos Intrieri",
-                title: "Desenvolvedor de Software Backend & Filósofo com foco em Java",
+                title: "Desenvolvedor de Software Backend Java & Filósofo",
                 subtitle: "Criando experiências digitais únicas com código e reflexão",
                 cta: "Vamos conversar",
                 typewriterTexts: [
-                    "Desenvolvedor de Software Backend & Filósofo",
+                    "Desenvolvedor de Software Backend Java & Filósofo",
                     "Desenvolvedor de Software Backend Java",
                     "Filósofo & Programador",
                     "Criador de Soluções Digitais"
@@ -70,11 +70,11 @@ const Portfolio = () => {
                         description: "A filosofia me ensinou a pensar criticamente, questionar pressupostos e buscar a essência dos problemas. Esta base filosófica tornou-se fundamental no meu desenvolvimento como programador."
                     }
                 ]
-            }, 
+            },
             projects: {
-                title: "Meus Projetos",
+                title: "Projetos em Destaque",
                 viewProject: "Ver Projeto",
-                viewCode: "Acessar Github",
+                viewCode: "Ver Código",
                 viewDetails: "Ver Detalhes",
                 closeModal: "Fechar",
                 partner: "Parceiro",
@@ -87,13 +87,38 @@ const Portfolio = () => {
                 softSkills: "Soft Skills",
                 projects: [
                     {
+                        id: "sidequest",
+                        title: "SideQuest",
+                        subtitle: "Sistema de Gestão de Tarefas com Autenticação JWT",
+                        description: "Sistema de gerenciamento de tarefas com controle de acesso baseado em perfis, autenticação JWT via Spring Security e acompanhamento de progresso.",
+                        partner: "GSW",
+                        period: "3º Semestre - 2024",
+                        role: "Backend Java Developer",
+                        mediaType: "image",
+                        media: [
+                            "/YNTAX.png"
+                        ],
+                        technologies: [
+                            { name: "Java", color: "#f89820" },
+                            { name: "Spring Boot", color: "#6DB33F" },
+                            { name: "Spring Security", color: "#6DB33F" },
+                            { name: "MongoDB", color: "#4DB33D" },
+                            { name: "React", color: "#61DAFB" },
+                            { name: "Tailwind CSS", color: "#38BDF8" }
+                        ],
+                        longDescription: "O SideQuest é um sistema de gestão de tarefas desenvolvido pela equipe Syntax seguindo metodologia ágil com sprints, dailies, reviews e retrospectivas. O backend foi construído em Java com Spring Boot, com autenticação e autorização implementadas via Spring Security utilizando tokens JWT, garantindo controle de acesso baseado em perfis de usuário. O sistema conta com um microsserviço dedicado de anexos, responsável pelo upload de arquivos e integração entre frontend e backend. A persistência de dados foi feita em MongoDB, e o frontend em React com Tailwind CSS oferece interface para criação, edição, exclusão e acompanhamento de status das tarefas.",
+                        contributions: "Atuei no desenvolvimento backend, criando endpoints REST para criação, edição e exclusão de tarefas e usuários. Implementei a camada de autenticação e controle de acesso baseado em perfis utilizando Spring Security e JWT, garantindo que cada usuário tivesse acesso apenas às funcionalidades permitidas pelo seu perfil. Desenvolvi o microsserviço de anexos, responsável pelo upload de arquivos e sua integração com o restante do sistema. Também contribuí com funcionalidades de gerenciamento de tarefas, atualização de status e acompanhamento de progresso, mantendo o código organizado e integrado ao frontend.",
+                        hardSkills: "Desenvolvimento backend em Java com Spring Boot, configuração de segurança e autenticação stateless com Spring Security e JWT, controle de acesso baseado em perfis (role-based access control), criação de APIs REST para CRUD de tarefas e usuários, desenvolvimento de microsserviço de upload de arquivos, persistência de dados com MongoDB, integração entre backend Java e frontend React via consumo de APIs REST.",
+                        softSkills: "Aprimorei minhas habilidades colaborativas atuando de forma integrada com o time em metodologia ágil, sempre com postura proativa para resolver impedimentos. Desenvolvi maior capacidade de comunicação técnica ao discutir decisões de arquitetura de segurança com a equipe, e fortaleci minha atenção a detalhes ao implementar controle de acesso, onde pequenos erros de configuração podem gerar falhas de segurança significativas."
+                    },
+                    {
                         id: "envirosense",
                         title: "EnviroSense",
                         subtitle: "Plataforma de Monitoramento de Estações Meteorológicas com IoT",
                         description: "Sistema completo de monitoramento meteorológico em tempo real com integração IoT via MQTT, duplo banco de dados (MongoDB + PostgreSQL), alertas automáticos e dashboard com gráficos dinâmicos.",
                         partner: "Tecsus",
                         period: "2026-1",
-                        role: "Desenvolvedor Full-Stack",
+                        role: "Desenvolvedor Backend / Full-Stack",
                         mediaType: "logo",
                         media: [],
                         technologies: [
@@ -120,7 +145,7 @@ const Portfolio = () => {
                         description: "Sistema desenvolvido para monitoramento de estufa inteligente, onde dados vindos da estufa são armazenados e analisados em tempo real.",
                         partner: "FATEC + Equipe I9",
                         period: "3º Semestre - 2024",
-                        role: "Scrum Master & Full Stack Developer",
+                        role: "Scrum Master & Backend / Full-Stack Developer",
                         mediaType: "video",
                         media: [
                             "/smart_farm_1.gif"
@@ -138,37 +163,13 @@ const Portfolio = () => {
                         softSkills: "Liderança como Scrum Master coordenando uma equipe em metodologia ágil, gestão de conflitos e facilitação de comunicação entre membros, organização e priorização de tarefas em sprints, trabalho em equipe em ambiente de aprendizado inicial, adaptabilidade diante de desafios técnicos e organizacionais, proatividade na resolução de problemas e assunção de responsabilidades desde o início do curso."
                     },
                     {
-                        id: "syntax",
-                        title: "Syntax",
-                        subtitle: "Sistema de Construção de uma Aplicação de Tarefas",
-                        description: "Sistema desenvolvido para armazenamento de listas de tarefas, projetos, calendário e gráficos, todos voltados para a criação de tarefas.",
-                        partner: "GSW",
-                        period: "3º Semestre - 2024",
-                        role: "Full Stack Developer",
-                        mediaType: "image",
-                        media: [
-                            "/YNTAX.png"
-                        ],
-                        technologies: [
-                            { name: "React", color: "#61DAFB" },
-                            { name: "Typescript", color: "#3178C6" },
-                            { name: "Tailwind CSS", color: "#38BDF8" },
-                            { name: "Spring Boot", color: "#6DB33F" },
-                            { name: "MongoDB", color: "#4DB33D" }
-                        ],
-                        longDescription: "O desenvolvimento do sistema seguiu rigorosamente práticas modernas de metodologias ágeis, semelhantes ao processo utilizado na criação de aplicações de gerenciamento de tarefas de alta eficiência. Trabalhamos com ciclos iterativos curtos, definição clara de backlog, priorização orientada ao valor entregável e reuniões constantes de alinhamento, como dailies, sprint planning, reviews e retrospectivas. Esse fluxo permitiu que cada funcionalidade fosse planejada, construída e refinada de forma incremental, garantindo adaptação rápida às necessidades do cliente e entregas contínuas.",
-                        contributions: "Minhas contribuições foram decisivas para garantir um projeto eficaz e alinhado ao objetivo do cliente. Atuei tanto no backend quanto no frontend, entregando funcionalidades completas e estáveis, além de colaborar ativamente na prototipação e integração das partes do sistema. Como membro proativo da equipe, incentivei o engajamento do grupo, ajudei a manter o ritmo das entregas e contribuí para um ambiente colaborativo e motivado.",
-                        hardSkills: "No desenvolvimento, utilizei React aliado ao Tailwind CSS para construir interfaces responsivas e dinâmicas, com boa escalabilidade visual. Todo o front-end foi estruturado em TypeScript, garantindo tipagem forte e maior segurança no código. No back-end, empregamos Spring Boot para criação de APIs robustas e performáticas, integradas ao MongoDB, que permitiu um armazenamento flexível e eficiente dos dados capturados em tempo real.",
-                        softSkills: "Aprimorei minhas habilidades colaborativas atuando de forma integrada tanto no front-end quanto no back-end, sempre com postura proativa para resolver impedimentos e apoiar o time. Desenvolvi ainda maior capacidade de comunicação, alinhamento técnico e cooperação durante as sprints, contribuindo para o fluxo contínuo e harmônico do projeto."
-                    },
-                    {
                         id: "invsort",
                         title: "Inv.Sort",
                         subtitle: "Sistema Para Gestão de Estoque",
                         description: "Aplicação web para gerenciamento de estoque empresarial com análise de dados, controle de produtos e relatórios avançados.",
                         partner: "FATEC",
                         period: "2º Semestre - 2024",
-                        role: "Full Stack Developer",
+                        role: "Backend / Full-Stack Developer",
                         mediaType: "carousel",
                         media: [
                             "/inv_sort1.png"
@@ -185,6 +186,7 @@ const Portfolio = () => {
                         hardSkills: "Construção de interfaces dinâmicas e responsivas com React, utilizando hooks (useState, useEffect, useContext) e componentização eficiente, estilização moderna e utilitária com Tailwind CSS, integração com APIs REST usando Axios para requisições HTTP assíncronas, desenvolvimento de rotas e middlewares com Express.js, modelagem e manipulação de dados com Prisma ORM, validações tanto no frontend quanto no backend, implementação de filtros dinâmicos e ordenação de dados, gerenciamento de estado da aplicação.",
                         softSkills: "Persistência e determinação para superar desafios técnicos e organizacionais, capacidade de trabalho em equipe mesmo em contextos difíceis, gestão autônoma de tempo e prioridades para manter entregas dentro do prazo, flexibilidade para se adaptar a mudanças de requisitos durante as sprints, comunicação efetiva para alinhamento de expectativas, proatividade na identificação e resolução de problemas antes que se tornem impedimentos críticos, resiliência diante de dificuldades de integração da equipe."
                     }
+
                 ]
             },
             contact: {
@@ -199,7 +201,7 @@ const Portfolio = () => {
                 location: "Localização",
                 info: {
                     location: "Caçapava, SP - Brasil",
-                    email: "carlos.intrieri@aluno.cps.sp.gov.br"
+                    email: "cjdintrieri@gmail.com"
                 }
             }
         },
@@ -215,12 +217,12 @@ const Portfolio = () => {
             hero: {
                 greeting: "Hello, I'm",
                 name: "Carlos Intrieri",
-                title: "Backend Software Developer & Philosopher",
+                title: "Java Backend Software Developer & Philosopher",
                 subtitle: "Creating unique digital experiences with code and reflection",
                 cta: "Let's talk",
                 typewriterTexts: [
-                    "Backend Software Developer & Philosopher focused on Java e Spring Boot",
-                    "Java Backend Developer",
+                    "Java Backend Software Developer & Philosopher",
+                    "Java Backend Software Developer",
                     "Philosopher & Programmer",
                     "Digital Solutions Creator"
                 ]
@@ -279,13 +281,38 @@ const Portfolio = () => {
                 softSkills: "Soft Skills",
                 projects: [
                     {
+                        id: "sidequest",
+                        title: "SideQuest",
+                        subtitle: "Task Management System with JWT Authentication",
+                        description: "Task management system with role-based access control, JWT authentication via Spring Security and progress tracking.",
+                        partner: "GSW",
+                        period: "3rd Semester - 2024",
+                        role: "Backend Java Developer",
+                        mediaType: "image",
+                        media: [
+                            "/YNTAX.png"
+                        ],
+                        technologies: [
+                            { name: "Java", color: "#f89820" },
+                            { name: "Spring Boot", color: "#6DB33F" },
+                            { name: "Spring Security", color: "#6DB33F" },
+                            { name: "MongoDB", color: "#4DB33D" },
+                            { name: "React", color: "#61DAFB" },
+                            { name: "Tailwind CSS", color: "#38BDF8" }
+                        ],
+                        longDescription: "SideQuest is a task management system developed by the Syntax team following agile methodology with sprints, dailies, reviews and retrospectives. The backend was built in Java with Spring Boot, with authentication and authorization implemented via Spring Security using JWT tokens, ensuring role-based access control. The system includes a dedicated attachments microservice responsible for file uploads and frontend-backend integration. Data persistence was done with MongoDB, and the React frontend with Tailwind CSS provides an interface for creating, editing, deleting and tracking task status.",
+                        contributions: "I worked on backend development, creating REST endpoints for task and user creation, editing and deletion. I implemented the authentication layer and role-based access control using Spring Security and JWT, ensuring each user could only access features permitted by their role. I developed the attachments microservice, responsible for file uploads and integration with the rest of the system. I also contributed to task management features, status updates and progress tracking, keeping the code organized and integrated with the frontend.",
+                        hardSkills: "Backend development in Java with Spring Boot, security configuration and stateless authentication with Spring Security and JWT, role-based access control implementation, REST API creation for task and user CRUD, attachments upload microservice development, data persistence with MongoDB, integration between Java backend and React frontend via REST API consumption.",
+                        softSkills: "Improved collaborative skills working integrated with the team in agile methodology, always proactive to solve impediments. I developed greater technical communication ability when discussing security architecture decisions with the team, and strengthened my attention to detail when implementing access control, where small configuration mistakes can lead to significant security flaws."
+                    },
+                    {
                         id: "envirosense",
                         title: "EnviroSense",
                         subtitle: "Weather Station Monitoring Platform with IoT",
                         description: "Complete real-time meteorological monitoring system with IoT integration via MQTT, dual database (MongoDB + PostgreSQL), automatic alerts and dashboard with dynamic charts.",
                         partner: "Tecsus",
                         period: "2026-1",
-                        role: "Full-Stack Developer",
+                        role: "Backend / Full-Stack Developer",
                         mediaType: "logo",
                         media: [],
                         technologies: [
@@ -312,7 +339,7 @@ const Portfolio = () => {
                         description: "System developed for smart greenhouse monitoring, where data from the greenhouse is stored and analyzed in real time.",
                         partner: "FATEC + Team I9",
                         period: "3rd Semester - 2024",
-                        role: "Scrum Master & Full Stack Developer",
+                        role: "Scrum Master & Backend / Full-Stack Developer",
                         mediaType: "video",
                         media: [
                             "/smart_farm_1.gif"
@@ -330,37 +357,13 @@ const Portfolio = () => {
                         softSkills: "Leadership as Scrum Master coordinating a team in agile methodology, conflict management and communication facilitation between members, task organization and prioritization in sprints, teamwork in an initial learning environment, adaptability to technical and organizational challenges, proactivity in problem solving and taking on responsibilities from the beginning of the course."
                     },
                     {
-                        id: "syntax",
-                        title: "Syntax",
-                        subtitle: "Task Management Application System",
-                        description: "System developed for storing task lists, projects, calendar and charts, all focused on task creation.",
-                        partner: "GSW",
-                        period: "3rd Semester - 2024",
-                        role: "Full Stack Developer",
-                        mediaType: "image",
-                        media: [
-                            "/YNTAX.png"
-                        ],
-                        technologies: [
-                            { name: "React", color: "#61DAFB" },
-                            { name: "Typescript", color: "#3178C6" },
-                            { name: "Tailwind CSS", color: "#38BDF8" },
-                            { name: "Spring Boot", color: "#6DB33F" },
-                            { name: "MongoDB", color: "#4DB33D" }
-                        ],
-                        longDescription: "The system development strictly followed modern agile methodology practices, similar to the process used in creating high-efficiency task management applications. We worked with short iterative cycles, clear backlog definition, deliverable value-oriented prioritization, and constant alignment meetings such as dailies, sprint planning, reviews, and retrospectives.",
-                        contributions: "My contributions were decisive in ensuring an effective project aligned with the client's goal. I worked on both backend and frontend, delivering complete and stable functionalities, in addition to actively collaborating on prototyping and system parts integration. As a proactive team member, I encouraged group engagement, helped maintain delivery pace, and contributed to a collaborative and motivated environment.",
-                        hardSkills: "In development, I used React combined with Tailwind CSS to build responsive and dynamic interfaces with good visual scalability. The entire front-end was structured in TypeScript, ensuring strong typing and greater code security. On the back-end, we employed Spring Boot to create robust and high-performance APIs, integrated with MongoDB, which allowed flexible and efficient storage of real-time captured data.",
-                        softSkills: "I improved my collaborative skills by working in an integrated way on both front-end and back-end, always with a proactive attitude to solve impediments and support the team. I developed even greater communication capacity, technical alignment, and cooperation during sprints, contributing to the continuous and harmonious project flow."
-                    },
-                    {
                         id: "invsort",
                         title: "Inv.Sort",
                         subtitle: "Inventory Management System",
                         description: "Web application for business inventory management with data analysis, product control and advanced reporting.",
                         partner: "FATEC",
                         period: "2nd Semester - 2024",
-                        role: "Full Stack Developer",
+                        role: "Backend / Full-Stack Developer",
                         mediaType: "carousel",
                         media: [
                             "/inv_sort1.png"
@@ -377,6 +380,7 @@ const Portfolio = () => {
                         hardSkills: "Building dynamic and responsive interfaces with React using hooks (useState, useEffect, useContext) and efficient componentization, modern and utility-first styling with Tailwind CSS, REST API integration using Axios for asynchronous HTTP requests, route and middleware development with Express.js, data modeling and manipulation with Prisma ORM, validations on both frontend and backend, dynamic filter and data sorting implementation, application state management.",
                         softSkills: "Persistence and determination to overcome technical and organizational challenges, teamwork ability even in difficult contexts, autonomous time and priority management to maintain deliveries on schedule, flexibility to adapt to requirement changes during sprints, effective communication for expectation alignment, proactivity in identifying and solving problems before they become critical impediments, resilience in the face of team integration difficulties."
                     }
+
                 ]
             },
             contact: {
@@ -391,7 +395,7 @@ const Portfolio = () => {
                 location: "Location",
                 info: {
                     location: "Caçapava, SP - Brazil",
-                    email: "carlos.intrieri@fatec.sp.gov.br"
+                    email: "cjdintrieri@gmail.com"
                 }
             }
         }
@@ -442,42 +446,47 @@ const Portfolio = () => {
     }, []);
 
     // Skills Data
+    const NIVEIS = {
+        basico:        { label: 'Básico',        color: '#94a3b8' },
+        intermediario: { label: 'Intermediário',  color: '#818cf8' },
+        avancado:      { label: 'Avançado',       color: '#a855f7' },
+        especialista:  { label: 'Especialista',   color: '#ec4899' },
+    };
+
     const skillsData = [
         {
             category: 'Frontend', skills: [
-                { name: 'HTML5', level: 80, icon: '🌐' },
-                { name: 'CSS3', level: 80, icon: '🎨' },
-                { name: 'JavaScript', level: 85, icon: '⚡' },
-                { name: 'TypeScript', level: 80, icon: '📝' },
-                { name: 'React', level: 88, icon: '⚛️' },
-                { name: 'Bootstrap', level: 85, icon: '🎯' }
+                { name: 'HTML5',      nivel: 'avancado',      icon: '🌐' },
+                { name: 'CSS3',       nivel: 'avancado',      icon: '🎨' },
+                { name: 'JavaScript', nivel: 'avancado',      icon: '⚡' },
+                { name: 'TypeScript', nivel: 'intermediario', icon: '📝' },
+                { name: 'React',      nivel: 'avancado',      icon: '⚛️' },
+                { name: 'Bootstrap',  nivel: 'avancado',      icon: '🎯' }
             ]
         },
         {
             category: 'Backend', skills: [
-                { name: 'Python', level: 92, icon: '🐍' },
-                { name: 'Node.js', level: 82, icon: '🟢' },
-                { name: 'Express', level: 82, icon: '🚂' },
-                { name: 'JavaScript', level: 85, icon: '⚡' },
-                { name: 'TypeScript', level: 80, icon: '📝' },
-                { name: 'Java', level: 95, icon: '☕' },
-                { name: 'Spring Boot', level: 95, icon: '🍃' },
-                { name: 'REST APIs', level: 95, icon: '🔌' }
+                { name: 'Python',     nivel: 'avancado',      icon: '🐍' },
+                { name: 'Node.js',    nivel: 'avancado',      icon: '🟢' },
+                { name: 'Express',    nivel: 'avancado',      icon: '🚂' },
+                { name: 'Java',       nivel: 'avancado',      icon: '☕' },
+                { name: 'Spring Boot',nivel: 'avancado',      icon: '🍃' },
+                { name: 'REST APIs',  nivel: 'avancado',      icon: '🔌' }
             ]
         },
         {
             category: 'Database', skills: [
-                { name: 'MySQL', level: 95, icon: '🗄️' },
-                { name: 'PostgreSQL', level: 88, icon: '🐘' },
-                { name: 'MongoDB', level: 85, icon: '🍃' }
+                { name: 'MySQL',      nivel: 'avancado',      icon: '🗄️' },
+                { name: 'PostgreSQL', nivel: 'avancado',      icon: '🐘' },
+                { name: 'MongoDB',    nivel: 'intermediario', icon: '🍃' }
             ]
         },
         {
             category: 'DevOps', skills: [
-                { name: 'Docker', level: 80, icon: '🐳' },
-                { name: 'Linux', level: 80, icon: '🐧' },
-                { name: 'AWS', level: 65, icon: '☁️' },
-                { name: 'Git', level: 92, icon: '📚' }
+                { name: 'Docker',     nivel: 'intermediario', icon: '🐳' },
+                { name: 'Linux',      nivel: 'avancado',      icon: '🐧' },
+                { name: 'AWS',        nivel: 'basico',        icon: '☁️' },
+                { name: 'Git',        nivel: 'avancado',      icon: '📚' }
             ]
         }
     ];
@@ -782,25 +791,36 @@ const Portfolio = () => {
                                     {category.category}
                                 </h3>
                                 <div className="space-y-4">
-                                    {category.skills.map((skill, skillIndex) => (
-                                        <div key={skillIndex} className="space-y-2">
-                                            <div className="flex items-center justify-between">
-                                                <div className="flex items-center space-x-2">
-                                                    <span className="text-lg">{skill.icon}</span>
-                                                    <span className={`text-sm font-medium ${isDarkTheme ? 'text-gray-300' : 'text-gray-700'}`}>{skill.name}</span>
-                                                </div>
-                                                <span className="text-xs text-purple-400">{skill.level}%</span>
+                                    {category.skills.map((skill, skillIndex) => {
+                                        const n = NIVEIS[skill.nivel] || NIVEIS.intermediario;
+                                        const dots = { basico: 1, intermediario: 2, avancado: 3, especialista: 4 };
+                                        const filled = dots[skill.nivel] || 2;
+                                        return (
+                                        <div key={skillIndex} className="flex items-center justify-between py-2"
+                                            style={{ borderBottom: '1px solid rgba(168,85,247,0.1)' }}>
+                                            <div className="flex items-center space-x-2">
+                                                <span className="text-base">{skill.icon}</span>
+                                                <span className={`text-sm font-medium ${isDarkTheme ? 'text-gray-300' : 'text-gray-700'}`}>{skill.name}</span>
                                             </div>
-                                            <div className={`w-full h-2 ${isDarkTheme ? 'bg-gray-700' : 'bg-gray-300'} rounded-full overflow-hidden`}>
-                                                <div
-                                                    className="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-1000 ease-out"
-                                                    style={{
-                                                        width: visibleSections.has('skills') ? `${skill.level}%` : '0%'
-                                                    }}
-                                                ></div>
+                                            <div className="flex items-center gap-2">
+                                                <div className="flex gap-1">
+                                                    {[1,2,3,4].map(i => (
+                                                        <div key={i} className="w-2.5 h-2.5 rounded-full transition-all duration-300"
+                                                            style={{
+                                                                background: i <= filled
+                                                                    ? `linear-gradient(135deg, #a855f7, ${n.color})`
+                                                                    : isDarkTheme ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.1)',
+                                                                boxShadow: i <= filled ? `0 0 6px ${n.color}88` : 'none',
+                                                                transform: i <= filled ? 'scale(1.1)' : 'scale(1)'
+                                                            }}
+                                                        />
+                                                    ))}
+                                                </div>
+                                                <span className="text-xs font-semibold w-24 text-right" style={{ color: n.color }}>{n.label}</span>
                                             </div>
                                         </div>
-                                    ))}
+                                        );
+                                    })}
                                 </div>
                             </div>
                         ))}
@@ -953,8 +973,8 @@ const Portfolio = () => {
                                     <div className="flex justify-center pt-6">
                                         <a
                                             href={
-                                                project.id === 'envirosense' ? 'https://github.com/carlosintrieri/envirosense' :
-                                                project.id === 'syntax' ? 'https://github.com/Syntax-Fatec-SJC' :
+                                                project.id === 'envirosense' ? 'https://github.com/lone-wolf-fatec/EnviroSense/' :
+                                                project.id === 'sidequest' ? 'https://github.com/Syntax-Fatec-SJC' :
                                                     project.id === 'smartfarm' ? 'https://github.com/carlosintrieri/DSM1-SmartFarm-Primeira-API' :
                                                         'https://github.com/carlosintrieri/DSM2-inv.sort-Segunda-API'
                                             }
@@ -1053,7 +1073,7 @@ const Portfolio = () => {
                                     from_email: form.email.value,
                                     subject: form.subject.value,
                                     message: form.message.value,
-                                    to_email: 'carlos.intrieri@fatec.sp.gov.br'
+                                    to_email: 'cjdintrieri@gmail.com'
                                 };
 
                                 // Enviar via EmailJS
