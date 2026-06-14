@@ -74,7 +74,7 @@ const Portfolio = () => {
             projects: {
                 title: "Projetos em Destaque",
                 viewProject: "Ver Projeto",
-                viewCode: "Ver Código",
+                viewCode: "Acessar GitHub",
                 viewDetails: "Ver Detalhes",
                 closeModal: "Fechar",
                 partner: "Parceiro",
